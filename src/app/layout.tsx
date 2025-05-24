@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { links } from "./utils/data";
-
+import { Analytics } from "@vercel/analytics/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -16,6 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(links.seatfinder),
   title: "SRM Exam Seat Finder",
+  description: "Find your Exam Seat Super Fast",
   keywords: [
     "SRM Seat Finder",
     "SRM Exam Seat Finder",
@@ -69,6 +70,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
