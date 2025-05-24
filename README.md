@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 AcademiaX SRM Exam Seat Finder
 
-## Getting Started
+A modern, lightning-fast seat finder for SRM KTR students.  
+Built with [Next.js](https://nextjs.org), [shadcn/ui](https://ui.shadcn.com/), and a beautiful custom dark theme.
 
-First, run the development server:
+<p align="center">
+  <img src="./public/LandingPage.png" alt="SRM Exam Seat Finder" />
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Super Fast**: Instantly find your SRM exam seat by registration number and date.
+- **Modern UI**: Responsive, glassmorphic design with dark mode by default.
+- **Share & Copy**: Share your seat details or copy them with a single click.
+- **Mobile Friendly**: Fully responsive.
+- **Built by [Jack Waghan](https://jackwaghan.in)**, creator of [AcademiaX](https://academiax.in).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🖥️ Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the repository:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/jackwaghan/srm-exam-seat-finder.git
+   cd srm-exam-seat-finder
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Install dependencies:**
 
-## Deploy on Vercel
+   ```bash
+   bun install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Run the development server:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   bun run dev
+   ```
+
+4. **Open your browser:**  
+   Visit [http://localhost:3000](http://localhost:3000) to use the app.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js 14+](https://nextjs.org/)
+- **UI:** [shadcn/ui](https://ui.shadcn.com/) + [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [react-icons](https://react-icons.github.io/react-icons/)
+- **Font:** [Geist](https://vercel.com/font)
+- **Web Scraping:** [cheerio](https://cheerio.js.org/) (server-side)
+
+---
+
+## ✨ Usage
+
+1. Enter your **SRM Registration Number**.
+2. Pick your **Exam Date** using the modern date picker.
+3. Click **Find Seat**.
+4. View, share, or copy your seat details.
+
+---
+
+## 📦 Deploy
+
+Deploy instantly on [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=srm-exam-seat-finder)  
+or any platform that supports Next.js.
+
+---
+
+## 🤝 Credits
+
+- **Built by [Jack Waghan](https://jackwaghan.in)**
+- Inspired by the needs of SRM KTR students.
+- Part of the [AcademiaX](https://academiax.in) ecosystem.
+
+---
+
+## 📄 License
+
+Apache License 2.0.  
+See [LICENSE](./LICENSE) for details.
+
+---
+
+> Made with ❤️ for SRM KTR students.
