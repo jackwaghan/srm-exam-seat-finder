@@ -1,4 +1,4 @@
-"use server";
+export const runtime = "edge";
 
 import * as cheerio from "cheerio";
 import {
@@ -7,15 +7,25 @@ import {
   listTime,
   listVenues,
   sessionList,
-} from "./utils/data";
+} from "../../utils/data";
 
-export async function findSeat({ registerNumber, date }) {
+export async function POST(request) {
+  const { registerNumber, date } = await request.json();
+
   // Validate input
   if (!registerNumber) {
-    return { error: "Invalid input. Please provide a register number." };
+    return Response.json(
+      { error: "Invalid input. Please provide a register number." },
+      { status: 400 }
+    );
   }
   if (!date) {
-    return { error: "Invalid input. Please provide a date." };
+    return Response.json(
+      { error: "Invalid input. Please provide a date." },
+      {
+        status: 400,
+      }
+    );
   }
 
   // Run both sessions and also the URLs in parallel and return the first Seat found
@@ -33,9 +43,12 @@ export async function findSeat({ registerNumber, date }) {
   // Filter out null results and return the first valid seat found
   const validSeats = seatResults.filter((result) => result !== null);
   if (validSeats.length === 0) {
-    return { error: "No seat found for the provided details." };
+    return Response.json(
+      { error: "No seat found for the provided details." },
+      { status: 404 }
+    );
   }
-  return validSeats;
+  return Response.json(validSeats);
 
   async function seatScraper({ registerNumber, date, session, urls }) {
     const body = `dated=${encodeURIComponent(
@@ -76,8 +89,8 @@ export async function findSeat({ registerNumber, date }) {
           const date = infoMatch ? infoMatch[2] : null;
           const session = infoMatch ? infoMatch[3] : null;
           const examTime = listTime[session];
-          if (roomNo.startsWith("FSH")) venue = "fsh";
-          if (roomNo.startsWith("B")) venue = "bio";
+          if (roomNo && roomNo.startsWith("FSH")) venue = "fsh";
+          if (roomNo && roomNo.startsWith("B")) venue = "bio";
           $(lookup)
             .find("table tr")
             .each((_, tableRow) => {

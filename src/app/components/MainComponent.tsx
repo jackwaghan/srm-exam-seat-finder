@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { findSeat } from "../seatfinder";
 import { FiLoader } from "react-icons/fi";
 import { links } from "../utils/data";
 import { Calendar } from "@/components/ui/calendar";
@@ -36,18 +35,35 @@ const MainComponent = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setError(null);
+    setSeatDetails(null);
+
     const data = {
       registerNumber: regNo.toUpperCase(),
       date: formattedExamDate,
     };
-    const response: seatType[] | { error: string } = await findSeat(data);
-    setLoading(false);
-    if ("error" in response) {
-      setError(response.error);
+
+    try {
+      const res = await fetch("/api/seatfinder", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const result = await res.json();
+      setLoading(false);
+
+      if (!res.ok || result.error) {
+        setError(result.error || "Something went wrong.");
+        setSeatDetails(null);
+      } else {
+        setSeatDetails(result);
+        setError(null);
+      }
+    } catch (err) {
+      setLoading(false);
+      console.error("Error fetching seat details:", err);
+      setError("Network error. Please try again.");
       setSeatDetails(null);
-    } else {
-      setSeatDetails(response);
-      setError(null);
     }
   };
 
