@@ -6,7 +6,7 @@ import { IoCopyOutline } from "react-icons/io5";
 const HeaderComponent = () => {
   return (
     <div className="w-full mt-4 px-2 lg:px-0 flex justify-center sticky top-2 z-50">
-      <div className="relative border-white/10 rounded-2xl items-center px-6 py-3 border shadow-2xl bg-gradient-to-br from-[#232526]/80 to-[#202222]/80 backdrop-blur-2xl flex justify-between max-w-3xl w-full glassmorphism">
+      <div className="relative border-white/10 rounded-2xl items-center px-6 py-3 border shadow-2xl bg-gradient-to-br from-[#232526]/80 to-[#202222]/80 backdrop-blur-2xl flex justify-between max-w-3xl w-full ">
         <h1 className="text-base lg:text-xl font-bold text-white tracking-wide drop-shadow-md select-none">
           <span className="text-[#7fffd4]">AcademiaX</span>
           <span> - Seat Finder</span>
@@ -16,7 +16,7 @@ const HeaderComponent = () => {
           <CopyButton />
         </div>
         {/* Decorative blurred accent */}
-        <div className="absolute inset-0 bg-[#7fffd4]/10 -z-50 blur-3xl" />
+        <div className="absolute inset-0 bg-[#7fffd4]/20 -z-50 blur-3xl" />
       </div>
     </div>
   );

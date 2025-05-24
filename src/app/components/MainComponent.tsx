@@ -102,7 +102,7 @@ const MainComponent = () => {
                     : "Exam Date (DD/MM/YYYY)"}
                 </button>
               </PopoverTrigger>
-              <PopoverContent className="w-auto p-0 bg-[#232526] border border-white/10 text-white rounded-xl shadow-lg">
+              <PopoverContent className="w-auto p-0 bg-white/5 border border-white/10 text-white rounded-xl shadow-xl backdrop-blur-3xl">
                 <Calendar
                   mode="single"
                   selected={examDate}
@@ -139,7 +139,7 @@ const MainComponent = () => {
             <EmptyField error={error} loading={loading} />
           )}
         </div>
-        <div className="absolute inset-0 bg-[#7fffd4]/20 -z-50 blur-3xl" />
+        <div className="absolute inset-0 bg-[#7fffd4]/30 -z-50 blur-3xl" />
       </div>
       {/* Built by Jack Waghan footer */}
       <div className=" absolute bottom-32 lg:bottom-10 left-1/2 -translate-x-1/2 w-full flex justify-center ">

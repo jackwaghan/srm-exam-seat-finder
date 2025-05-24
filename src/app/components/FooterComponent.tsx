@@ -5,7 +5,7 @@ import { links } from "../utils/data";
 const FooterComponent = () => {
   return (
     <footer className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-fit max-w-2xl">
-      <div className="relative flex items-center justify-between px-3 py-2 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-2xl glassmorphism">
+      <div className="relative bg-white/5 flex items-center justify-between px-3 py-2 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-2xl ">
         <div className="flex gap-3 items-center">
           <a
             href={links.github}

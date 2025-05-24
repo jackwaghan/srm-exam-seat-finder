@@ -1,5 +1,4 @@
-"use server";
-
+"use client";
 import * as cheerio from "cheerio";
 import {
   listUrls,
