@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { links } from "./utils/data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(links.seatfinder),
   title: "SRM Exam Seat Finder",
   keywords: [
     "SRM Seat Finder",
@@ -34,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SRM Exam Seat Finder",
     description: "Find your Exam Seat Super Fast",
-    url: "https://seatfinder.academiax.in",
+    url: links.seatfinder,
     siteName: "SRM Exam Seat Finder",
     images: [
       {

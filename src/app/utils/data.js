@@ -40,4 +40,5 @@ export const links = {
   portfolio: "https://jackwaghan.com/",
   github: "https://github.com/jackwaghan",
   linkedin: "https://www.linkedin.com/in/jackwaghan/",
+  seatfinder: "https://seatfinder.jackwaghan.com/",
 };
