@@ -15,7 +15,7 @@ Built with [Next.js](https://nextjs.org), [shadcn/ui](https://ui.shadcn.com/), a
 - **Modern UI**: Responsive, glassmorphic design with dark mode by default.
 - **Share & Copy**: Share your seat details or copy them with a single click.
 - **Mobile Friendly**: Fully responsive.
-- **Built by [Jack Waghan](https://jackwaghan.in)**, creator of [AcademiaX](https://academiax.in).
+- **Built by [Jack Waghan](https://jackwaghan.com)**, creator of [AcademiaX](https://academiax.in).
 
 ---
 
@@ -73,7 +73,7 @@ or any platform that supports Next.js.
 
 ## 🤝 Credits
 
-- **Built by [Jack Waghan](https://jackwaghan.in)**
+- **Built by [Jack Waghan](https://jackwaghan.com)**
 - Inspired by the needs of SRM KTR students.
 - Part of the [AcademiaX](https://academiax.in) ecosystem.
 
