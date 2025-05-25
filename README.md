@@ -60,7 +60,7 @@ Built with [Next.js](https://nextjs.org), [shadcn/ui](https://ui.shadcn.com/), a
 1. Enter your **SRM Registration Number**.
 2. Pick your **Exam Date** using the modern date picker.
 3. Click **Find Seat**.
-4. View, share, or copy your seat details.
+4. View and share your seat details.
 
 ---
 

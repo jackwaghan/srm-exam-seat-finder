@@ -89,8 +89,12 @@ export async function POST(request) {
           const date = infoMatch ? infoMatch[2] : null;
           const session = infoMatch ? infoMatch[3] : null;
           const examTime = listTime[session];
-          if (roomNo && roomNo.startsWith("FSH")) venue = "fsh";
-          if (roomNo && roomNo.startsWith("B")) venue = "bio";
+          const roomNoUpper = roomNo ? roomNo.toUpperCase() : "";
+          if (roomNoUpper.startsWith("FSH")) venue = "fsh";
+          else if (roomNoUpper.startsWith("B")) venue = "bio";
+          else if (roomNoUpper.startsWith("TP2")) venue = "tp2";
+          else if (roomNoUpper.startsWith("TP")) venue = "tp";
+
           $(lookup)
             .find("table tr")
             .each((_, tableRow) => {
