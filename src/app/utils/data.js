@@ -38,7 +38,7 @@ export const sessionList = ["AN", "FN"];
 export const links = {
   academiaX: "https://academiax.in/",
   portfolio: "https://jackwaghan.com/",
-  github: "https://github.com/jackwaghan",
+  github: "https://github.com/jackwaghan/srm-exam-seat-finder/",
   linkedin: "https://www.linkedin.com/in/jackwaghan/",
   seatfinder: "https://seatfinder.academiax.in/",
 };
