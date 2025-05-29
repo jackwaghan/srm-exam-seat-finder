@@ -1,11 +1,11 @@
 # 🎓 AcademiaX SRM Exam Seat Finder
 
-A modern, lightning-fast seat finder for SRM KTR students.  
-Built with [Next.js](https://nextjs.org), [shadcn/ui](https://ui.shadcn.com/), and a beautiful custom dark theme.
+
 
 <p align="center">
   <img src="./public/LandingPage.png" alt="SRM Exam Seat Finder" />
 </p>
+
 
 ---
 
